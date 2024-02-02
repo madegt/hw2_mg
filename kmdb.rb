@@ -63,22 +63,26 @@ new_studio["name"] = "Warner Bros."
 new_studio.save
 
 #Movie
+
+#build relationship w movies
+wb = Studio.find_by({"name" => "Warner Bros."})
+
 new_movie= Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 1
+new_movie["studio_id"] = wb["id"]
 new_movie.save
 
 new_movie= Movie.new
 new_movie["title"] = "The Dark Knight"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 1
+new_movie["studio_id"] = wb["id"]
 new_movie.save
 
 new_movie= Movie.new
 new_movie["title"] = "The Dark Knight Rises"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 1
+new_movie["studio_id"] = wb["id"]
 new_movie.save
 
 #Actor 
@@ -115,71 +119,100 @@ new_actor= Actor.new
 new_actor["name"] = "Maggie Gyllenhaal"
 new_actor.save
 
-#Role
+    #9
+new_actor= Actor.new
+new_actor["name"] = "Tom Hardy"
+new_actor.save
+    
+   #10
+   new_actor= Actor.new
+   new_actor["name"] = "Joseph Gordon-Levitt"
+   new_actor.save
 
+   #11
+   new_actor= Actor.new
+   new_actor["name"] = "Anne Hathaway"
+   new_actor.save
+
+##Role
+
+#build relationship w movie title
 batb = Movie.find_by({"title" => "Batman Begins"})
 dak = Movie.find_by({"title" => "The Dark Knight"})
 dakrise = Movie.find_by({"title" => "The Dark Knight Rises"})
 
+#build relationship w movie actor 
+c_b = Actor.find_by({"name"=>"Christian Bale"})
+m_c = Actor.find_by({"name"=>"Michael Caine"})
+l_n = Actor.find_by({"name"=>"Liam Neeson"})
+k_h = Actor.find_by({"name"=>"Katie Holmes"})
+g_old = Actor.find_by({"name"=>"Gary Oldman"})
+h_l = Actor.find_by({"name"=>"Heath Ledger"})
+a_e = Actor.find_by({"name"=>"Aaron Eckhart"})
+m_g = Actor.find_by({"name"=>"Maggie Gyllenhaal"})
+t_h=Actor.find_by({"name"=>"Tom Hardy"})
+jgl=Actor.find_by({"name"=>"Joseph Gordon-Levitt"})
+a_h=Actor.find_by({"name"=>"Anne Hathaway"})
+
 #1st movie
 new_role= Role.new
 new_role["movie_id"] = batb["id"]
-new_role["actor_id"] = 1
+new_role["actor_id"] = c_b["id"]
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = batb["id"]
-new_role["actor_id"] = 2
+new_role["actor_id"] = m_c["id"]
 new_role["character_name"] = "Alfred"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = batb["id"]
-new_role["actor_id"] = 3
+new_role["actor_id"] = l_n["id"]
 new_role["character_name"] = "Ra's Al Ghul"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = batb["id"]
-new_role["actor_id"] = 4
+new_role["actor_id"] = k_h["id"]
 new_role["character_name"] = "Rachel Dawes"
 new_role.save
 
 #2nd movie
 new_role= Role.new
 new_role["movie_id"] = dak["id"]
-new_role["actor_id"] = 4
+new_role["actor_id"] = g_old["id"]
 new_role["character_name"] = "Commissioner Gordon"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dak["id"]
-new_role["actor_id"] = 1
+new_role["actor_id"] = c_b["id"]
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dak["id"]
-new_role["actor_id"] = 2
+new_role["actor_id"] = m_c["id"]
 new_role["character_name"] = "Alfred"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dak["id"]
-new_role["actor_id"] = 6
+new_role["actor_id"] = h_l["id"]
 new_role["character_name"] = "Joker"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dak["id"]
-new_role["actor_id"] = 7
+new_role["actor_id"] = a_e["id"]
 new_role["character_name"] = "Harvey Dent"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dak["id"]
-new_role["actor_id"] = 8
+new_role["actor_id"] = m_g["id"]
 new_role["character_name"] = "Rachel Dawes"
 new_role.save
 
@@ -187,31 +220,31 @@ new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dakrise["id"]
-new_role["actor_id"] = 1
+new_role["actor_id"] = c_b["id"]
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dakrise["id"]
-new_role["actor_id"] = 5
+new_role["actor_id"] = g_old["id"]
 new_role["character_name"] = "Commissioner Gordon"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dakrise["id"]
-new_role["actor_id"] = 9
+new_role["actor_id"] = t_h["id"]
 new_role["character_name"] = "Bane"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dakrise["id"]
-new_role["actor_id"] = 10
+new_role["actor_id"] = jgl["id"]
 new_role["character_name"] = "John Blake"
 new_role.save
 
 new_role= Role.new
 new_role["movie_id"] = dakrise["id"]
-new_role["actor_id"] = 11
+new_role["actor_id"] = a_h["id"]
 new_role["character_name"] = "Selina Kyle"
 new_role.save
 
@@ -221,6 +254,18 @@ new_role.save
 puts "Movies"
 puts "======"
 puts ""
+
+#apple_employees = Contact.where({"company_id" => apple["id"]})
+
+#for contact in apple_employees
+ #   first_name = contact["first_name"]
+  #last_name = contact["last_name"]
+   #email = contact["email"]
+    
+    #puts "#{first_name} #{last_name} (#{email})"
+  #end
+  
+
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
