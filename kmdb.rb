@@ -48,6 +48,15 @@
 #   Delete any existing data beforehand so that each run of this script does not
 #   create duplicate data. (5 points)
 
+#4) Delete all existing data
+
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
+
+#5) 
+
 
 
 # - Query the data and loop through the results to display output similar to the
