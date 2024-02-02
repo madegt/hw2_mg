@@ -256,28 +256,27 @@ new_role.save
 
 #See number of loops 
 n_movies=Movie.all.count
-#puts "Number of movies: #{n_movies}"
+puts "Number of movies: #{n_movies}"
 
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
 puts ""
 
-#for zebra in n_movies
-    #title = movie["title"]
-    #year_release=movie["year_release"]
-    #rated=movie["rated"]   
-    #studio_id= movie["studio_id"]
-    #puts "#{title} #{year_release} #{rated} #{studio_id}"
-#end
+for movie in n_movies
+    title = movie["title"]
+    year_release=movie["year_release"]
+    rated=movie["rated"]   
+    studio_id= movie["studio_id"]
+    puts "#{title} #{year_release} #{rated} #{studio_id}"
+end
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
 #See number of loops 
-#n_roles=Role.all.count
+n_roles=Role.all.count
 #puts "Number of times on loop: #{n_roles}"
-
 
 # Prints a header for the cast output
 puts ""
@@ -285,17 +284,20 @@ puts "Top Cast"
 puts "========"
 puts ""
 
-# Query the cast data and loop through the results to display the cast output for each movie.
-# TODO!
-
-
-
-
-
+for cast in n_roles
+    title = movie["title"]
+    actor=actor["name"]
+    role=role["character_name"]   
+    puts "#{title} #{actor} #{role}"
+end
 
 #LAST STEP: On terminal run  rails runner kmdb.rb
 
 
+
+
+
+# Query the cast data and loop through the results to display the cast output for each movie.
 # Submission
 # 
 # - "Use this template" to create a brand-new "hw2" repository in your
