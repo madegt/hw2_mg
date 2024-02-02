@@ -28,21 +28,21 @@
 #   Table and columns should match the domain model. Execute the migration
 #   files to create the tables in the database. (5 points)
 
-# 0) SHOULD WE DROP TABLES?
-
+# 0) Drop all tables
+#Model.destroy_all
 
 #1) Generate tables in model from the terminal
 
-# rails generate model Studio
-# rails generate model Movie
-# rails generate model Actor
-# rails generate model Role
+#rails generate model Studio
+#rails generate model Movie
+#rails generate model Actor
+#rails generate model Role
 
 #2) Create table columns > db>migrate
 #on each tab of migrate I created the tables
 
 #3) Migrate 
-#gitpod /workspace/hw2_mg (main) $ rails db:migrate
+#gitpod/workspace/hw2_mg (main) $ rails db:migrate
 
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids.
 #   Delete any existing data beforehand so that each run of this script does not
@@ -115,8 +115,120 @@ new_actor= Actor.new
 new_actor["name"] = "Maggie Gyllenhaal"
 new_actor.save
 
-# - Query the data and loop through the results to display output similar to the
-#   sample "report" below. (10 points)
+#Role
+#1st movie
+new_role= Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 2
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 3
+new_role["character_name"] = "Ra's Al Ghul"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 4
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+#2nd movie
+new_role= Role.new
+new_role["movie_id"] = 1
+new_role["actor_id"] = 4
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 2
+new_role["character_name"] = "Alfred"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 6
+new_role["character_name"] = "Joker"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 7
+new_role["character_name"] = "Harvey Dent"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 2
+new_role["actor_id"] = 8
+new_role["character_name"] = "Rachel Dawes"
+new_role.save
+
+#3rd movie
+
+new_role= Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 1
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 5
+new_role["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 9
+new_role["character_name"] = "Bane"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 10
+new_role["character_name"] = "John Blake"
+new_role.save
+
+new_role= Role.new
+new_role["movie_id"] = 3
+new_role["actor_id"] = 11
+new_role["character_name"] = "Selina Kyle"
+new_role.save
+
+
+# - Query the data and loop through the results to display output similar to the sample "report" below. (10 points)
+
+# Prints a header for the movies output
+puts "Movies"
+puts "======"
+puts ""
+
+# Query the movies data and loop through the results to display the movies output.
+# TODO!
+
+# Prints a header for the cast output
+puts ""
+puts "Top Cast"
+puts "========"
+puts ""
+
+# Query the cast data and loop through the results to display the cast output for each movie.
+# TODO!
 
 
 
@@ -172,21 +284,4 @@ new_actor.save
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
-
-# Prints a header for the movies output
-puts "Movies"
-puts "======"
-puts ""
-
-# Query the movies data and loop through the results to display the movies output.
-# TODO!
-
-# Prints a header for the cast output
-puts ""
-puts "Top Cast"
-puts "========"
-puts ""
-
-# Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
