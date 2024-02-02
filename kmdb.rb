@@ -116,64 +116,69 @@ new_actor["name"] = "Maggie Gyllenhaal"
 new_actor.save
 
 #Role
+
+batb = Movie.find_by({"title" => "Batman Begins"})
+dak = Movie.find_by({"title" => "The Dark Knight"})
+dakrise = Movie.find_by({"title" => "The Dark Knight Rises"})
+
 #1st movie
 new_role= Role.new
-new_role["movie_id"] = 1
+new_role["movie_id"] = batb["id"]
 new_role["actor_id"] = 1
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 1
+new_role["movie_id"] = batb["id"]
 new_role["actor_id"] = 2
 new_role["character_name"] = "Alfred"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 1
+new_role["movie_id"] = batb["id"]
 new_role["actor_id"] = 3
 new_role["character_name"] = "Ra's Al Ghul"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 1
+new_role["movie_id"] = batb["id"]
 new_role["actor_id"] = 4
 new_role["character_name"] = "Rachel Dawes"
 new_role.save
 
 #2nd movie
 new_role= Role.new
-new_role["movie_id"] = 1
+new_role["movie_id"] = dak["id"]
 new_role["actor_id"] = 4
 new_role["character_name"] = "Commissioner Gordon"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 2
+new_role["movie_id"] = dak["id"]
 new_role["actor_id"] = 1
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 2
+new_role["movie_id"] = dak["id"]
 new_role["actor_id"] = 2
 new_role["character_name"] = "Alfred"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 2
+new_role["movie_id"] = dak["id"]
 new_role["actor_id"] = 6
 new_role["character_name"] = "Joker"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 2
+new_role["movie_id"] = dak["id"]
 new_role["actor_id"] = 7
 new_role["character_name"] = "Harvey Dent"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 2
+new_role["movie_id"] = dak["id"]
 new_role["actor_id"] = 8
 new_role["character_name"] = "Rachel Dawes"
 new_role.save
@@ -181,35 +186,34 @@ new_role.save
 #3rd movie
 
 new_role= Role.new
-new_role["movie_id"] = 3
+new_role["movie_id"] = dakrise["id"]
 new_role["actor_id"] = 1
 new_role["character_name"] = "Bruce Wayne"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 3
+new_role["movie_id"] = dakrise["id"]
 new_role["actor_id"] = 5
 new_role["character_name"] = "Commissioner Gordon"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 3
+new_role["movie_id"] = dakrise["id"]
 new_role["actor_id"] = 9
 new_role["character_name"] = "Bane"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 3
+new_role["movie_id"] = dakrise["id"]
 new_role["actor_id"] = 10
 new_role["character_name"] = "John Blake"
 new_role.save
 
 new_role= Role.new
-new_role["movie_id"] = 3
+new_role["movie_id"] = dakrise["id"]
 new_role["actor_id"] = 11
 new_role["character_name"] = "Selina Kyle"
 new_role.save
-
 
 # - Query the data and loop through the results to display output similar to the sample "report" below. (10 points)
 
