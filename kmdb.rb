@@ -69,18 +69,22 @@ wb = Studio.find_by({"name" => "Warner Bros."})
 
 new_movie= Movie.new
 new_movie["title"] = "Batman Begins"
+new_movie["year_released"] = 2005
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = wb["id"]
 new_movie.save
 
+
 new_movie= Movie.new
 new_movie["title"] = "The Dark Knight"
+new_movie["year_released"] = 2008
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = wb["id"]
 new_movie.save
 
 new_movie= Movie.new
 new_movie["title"] = "The Dark Knight Rises"
+new_movie["year_released"] = 2012
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = wb["id"]
 new_movie.save
@@ -255,17 +259,19 @@ puts "Movies"
 puts "======"
 puts ""
 
-#apple_employees = Contact.where({"company_id" => apple["id"]})
+#zebra = Movie.where({"studio_id" => "Warner Bros."})
+#puts "Number of movies: #{zebra.count}"
 
-#for contact in apple_employees
- #   first_name = contact["first_name"]
-  #last_name = contact["last_name"]
-   #email = contact["email"]
-    
-    #puts "#{first_name} #{last_name} (#{email})"
-  #end
+#for zebra in n_movies
+  #  title = movie["title"]
+   # year_release=movie["year_release"]
+    #rated=movie["rated"]   
+    #studio_id= movie["studio_id"]
+
+#puts "#{title} #{year_release} #{rated} #{studio_id}"
+
+#end
   
-
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
