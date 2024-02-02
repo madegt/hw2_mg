@@ -55,12 +55,76 @@ Movie.destroy_all
 Actor.destroy_all
 Role.destroy_all
 
-#5) 
+#5) Insert data sample using ruby 
 
+#Studio
+new_studio = Studio.new
+new_studio["name"] = "Warner Bros."
+new_studio.save
 
+#Movie
+new_movie= Movie.new
+new_movie["title"] = "Batman Begins"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = 1
+new_movie.save
+
+new_movie= Movie.new
+new_movie["title"] = "The Dark Knight"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = 1
+new_movie.save
+
+new_movie= Movie.new
+new_movie["title"] = "The Dark Knight Rises"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = 1
+new_movie.save
+
+#Actor 
+    #1
+new_actor= Actor.new
+new_actor["name"] = "Christian Bale"
+new_actor.save
+    #2
+new_actor= Actor.new
+new_actor["name"] = "Michael Caine"
+new_actor.save
+    #3
+new_actor= Actor.new
+new_actor["name"] = "Liam Neeson"
+new_actor.save
+    #4
+new_actor= Actor.new
+new_actor["name"] = "Katie Holmes"
+new_actor.save
+    #5
+new_actor= Actor.new
+new_actor["name"] = "Gary Oldman"
+new_actor.save
+    #6
+new_actor= Actor.new
+new_actor["name"] = "Heath Ledger"
+new_actor.save
+    #7
+new_actor= Actor.new
+new_actor["name"] = "Aaron Eckhart"
+new_actor.save
+    #8
+new_actor= Actor.new
+new_actor["name"] = "Maggie Gyllenhaal"
+new_actor.save
 
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
+
+
+
+
+
+
+#LAST STEP: On terminal run  rails runner kmdb.rb
+
 
 # Submission
 # 
