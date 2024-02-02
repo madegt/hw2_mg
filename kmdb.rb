@@ -21,12 +21,35 @@
 # 
 # There are three deliverables for this assignment, all delivered within
 # this repository and submitted via GitHub and Canvas:
+
+
+
 # - Generate the models and migration files to match the domain model from hw1.
 #   Table and columns should match the domain model. Execute the migration
 #   files to create the tables in the database. (5 points)
+
+# 0) SHOULD WE DROP TABLES?
+
+
+#1) Generate tables in model from the terminal
+
+# rails generate model Studio
+# rails generate model Movie
+# rails generate model Actor
+# rails generate model Role
+
+#2) Create table columns > db>migrate
+#on each tab of migrate I created the tables
+
+#3) Migrate 
+#gitpod /workspace/hw2_mg (main) $ rails db:migrate
+
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids.
 #   Delete any existing data beforehand so that each run of this script does not
 #   create duplicate data. (5 points)
+
+
+
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 
