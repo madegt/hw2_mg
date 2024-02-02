@@ -263,7 +263,7 @@ puts "Movies"
 puts "======"
 puts ""
 
-for movie in n_movies
+#for movie in n_movies
     title = movie["title"]
     year_release=movie["year_release"]
     rated=movie["rated"]   
